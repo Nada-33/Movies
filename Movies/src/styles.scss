@@ -1,0 +1,26 @@
+// @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz@6..96&family=Montserrat+Alternates:wght@300&family=Rubik:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz@6..96&family=Montserrat+Alternates:wght@300&family=Poppins:ital,wght@0,700;1,400;1,500&family=Rubik:wght@400;500;700&display=swap');
+body {
+    background-color: #431B5F !important;
+    color: #fff !important;
+    font-family: 'Poppins ', sans-serif !important;
+}
+.bg-ligths{
+    background-color: #24baef !important;
+}
+
+.border-color{
+    color: #66717E;
+}
+.my-border{
+   height: 2px; 
+   border-radius: 1px;
+   background-color: #383B53;
+}
+.second-font-color{
+    color: #949cb0;
+}
+a:hover, a:active ,a:link, a:visited{
+    text-decoration: none;
+    color: white;
+}

@@ -1,0 +1,73 @@
+<app-homewall></app-homewall>
+<div class="row my-5  mx-4">
+    <div class="col-md-4 mt-lg-5  p-lg-4">
+        <div class="my-border w-25  my-3"></div>
+        <div class="my-3">
+            <h2 class="my-4 fw-bolder py-3">
+                Playing now <br /> watch now
+            </h2>
+            <p class="h6 mt-lg-3 text-secondary fw-bolder ">now in cinema and your home </p>
+        </div>
+
+        <div class="my-border ms-auto w-75  my-3"></div>
+    </div>
+    <div *ngFor="let movie of nowPlaying" class="col-md-2 p-2">
+        <div class="position-relative">
+            <a [routerLink]="['/moviesdetails',movie.id]">
+                <img [src]="imgPrefix+movie.poster_path" class="w-100 ">
+                <!-- <h6>{{movie.title}}</h6> -->
+                <div class="vote position-absolute top-0 end-0 bg-ligths fw-bolder p-2">
+                    {{movie.vote_average}}
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="row my-5  mx-2">
+    <div class="col-md-4 mt-lg-5  p-lg-4">
+        <div class="my-border w-25  my-3"></div>
+        <div class="my-3">
+            <h2 class="my-4 fw-bolder py-3">
+                popular now <br /> watch now
+            </h2>
+            <p class="h6 mt-lg-3 text-secondary fw-bolder ">now in cinema and your home </p>
+        </div>
+
+        <div class="my-border ms-auto w-75  my-3"></div>
+    </div>
+    <div *ngFor="let movie of popular" class="col-md-2 p-2">
+        <div class="position-relative">
+            <a [routerLink]="['/moviesdetails',movie.id]">
+                <img [src]="imgPrefix+movie.poster_path" class="w-100 ">
+                <!-- <h6>{{movie.title}}</h6> -->
+                <div class="vote position-absolute top-0 end-0 bg-ligths fw-bolder p-2">
+                    {{movie.vote_average}}
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="row mt-5 mx-2 ">
+    <div class="col-md-4 mt-lg-5  p-lg-4">
+        <div class="my-border w-25  my-3"></div>
+        <div class="my-3">
+            <h2 class="my-4 fw-bolder py-3">
+                top rated movies <br /> best of best
+            </h2>
+            <p class="h6 mt-lg-3 text-secondary fw-bolder ">now in cinema and your home </p>
+        </div>
+
+        <div class="my-border ms-auto w-75  my-3"></div>
+    </div>
+    <div *ngFor="let movie of top_rated" class="col-md-2 p-2">
+        <div class="position-relative">
+            <a [routerLink]="['/moviesdetails',movie.id]">
+                <img [src]="imgPrefix+movie.poster_path" class="w-100  ">
+                <!-- <h6>{{movie.title}}</h6> -->
+                <div class="vote position-absolute top-0 end-0 bg-ligths fw-bolder p-2">
+                    {{movie.vote_average}}
+                </div>
+            </a>
+        </div>
+    </div>
+</div>

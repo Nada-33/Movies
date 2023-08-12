@@ -1,0 +1,22 @@
+.myimg {
+    height: 150px;
+    width: 100%;
+}
+.myColor {
+    background-color: #E3E1F5;
+   
+}
+::placeholder {
+    color: #211E42;
+    opacity: 1;
+}
+.form-control:focus {
+    border-color: #e1dfba;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #e1dfba;
+}
+.mybtn {
+    // background-color:#C6B9CD !important;
+    background-color: #bd59c6 !important;
+    border-color: #e1dfba;
+    color: white;
+}

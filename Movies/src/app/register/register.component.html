@@ -1,0 +1,60 @@
+<!-- <app-movies></app-movies> -->
+<div class="row p-5 justify-content-center mt-3 align-items-center   ">
+    <div class="col-lg-3 d-none d-lg-block  " *ngFor="let movie of popular">
+        <img [src]="imgPrefix+movie.poster_path" class="img-fluid rounded-3" alt="">
+    </div>
+    <div class="col-lg-5">
+        <form action="" (ngSubmit)="submitRegister(regForm)" class=" p-2 rounded-4 "
+            [formGroup]="regForm">
+            <h1>join us now</h1>
+            <div class="mb-3 ">
+                <label for="firstName" class="form-label">First name</label>
+                <input type="text" formControlName="firstName" class="form-control myColor  text-light " id="firstName"
+                    placeholder="First name">
+            </div>
+            <div *ngIf="regForm.get('firstName')?.errors &&
+             regForm.get('firstName')?.touched" class="text-danger   fw-bolder">
+                <p *ngIf="regForm.get('firstName')?.errors?.['required']">first name is required !</p>
+                <p *ngIf="regForm.get('firstName')?.errors?.['minlength']">first name is min length 3 !</p>
+                <p *ngIf="regForm.get('firstName')?.errors?.['maxlength']">first name is max length 20 !</p>
+            </div>
+            <div class="mb-3 ">
+                <label for="lastName" class="form-label">Last name</label>
+                <input type="text" formControlName="lastName" class="form-control myColor  text-light" id="lastName"
+                    placeholder="Last name ">
+            </div>
+            <div *ngIf="regForm.get('lastName')?.errors &&
+            regForm.get('lastName')?.touched" class="text-danger   fw-bolder">
+                <p *ngIf="regForm.get('lastName')?.errors?.['required']">last name is required !</p>
+                <p *ngIf="regForm.get('lastName')?.errors?.['minlength']">firstlast name is min length 3 !</p>
+                <p *ngIf="regForm.get('lastName')?.errors?.['maxlength']">last name is max length 20 !</p>
+            </div>
+    
+            <div class="mb-3 ">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" formControlName="email" class="form-control myColor  text-light" id="email"
+                    placeholder="Email ">
+            </div>
+            <div *ngIf="regForm.get('email')?.errors &&
+            regForm.get('email')?.touched" class="text-danger   fw-bolder">
+                <p *ngIf="regForm.get('email')?.errors?.['required']">email is required !</p>
+                <p *ngIf="regForm.get('email')?.errors?.['email']">Please write rigth email !</p>
+            </div>
+            <div class="mb-3 ">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" formControlName="password" class="form-control myColor  text-light" id="password"
+                    placeholder="Password ">
+            </div>
+            <div *ngIf="regForm.get('password')?.errors &&
+            regForm.get('password')?.touched" class="text-danger fx-bold   fw-bolder">
+                <p *ngIf="regForm.get('password')?.errors?.['required']">password is required !</p>
+                <p *ngIf="regForm.get('password')?.errors?.['minlength']">password is min length 5 !</p>
+                <p *ngIf="regForm.get('password')?.errors?.['maxlength']">password is max length 16 !</p>
+            </div>
+            <div class="clearfix">
+    
+                <button [disabled]="regForm.invalid" class="btn mybtn float-end btn-danger mt-2  ">Register</button>
+            </div>
+        </form>
+    </div>
+</div>

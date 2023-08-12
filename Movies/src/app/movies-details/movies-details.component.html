@@ -1,0 +1,29 @@
+<div class="row m-5 align-items-center justify-content-center p-5 ">
+    <div class="col-md-4">
+        <img class="img-fluid mt-3 rounded-3" [src]="imgPrefix+movieDetials.poster_path" alt="">
+    </div>
+    <div class="col-md-8 p-3 my-5">
+        <h3 class="fw-bolder h1 my-2 ">
+            <span class="mycolor">
+                <i class="fa-solid fa-dice"></i>
+                {{movieDetials.title}}
+            </span>
+        </h3>
+        <p class="h5">Release date : <span>{{movieDetials.release_date}}</span> </p>
+
+        <p class="h5">{{movieDetials.overview}}</p>
+        <h2>Genres</h2>
+        <ul class="list-unstyled  ">
+            <span class="me-1"><i class="fa-solid fa-arrows-to-dot"></i></span>
+            <li class="d-inline-block pe-3" *ngFor="let i of movieDetials.genres">{{i.name}}</li>
+        </ul>
+        <p>original language : {{movieDetials.original_language}}</p>
+
+        <p>revenue of the movie {{movieDetials.revenue}}</p>
+
+    </div>
+
+</div>
+<div>
+
+</div>
