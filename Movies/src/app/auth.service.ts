@@ -18,11 +18,11 @@ export class AuthService {
    }
 
   register(userData: object): Observable<any> {
-    return this._HttpClient.post('http://localhost:1000/auth/register', userData)
+    return this._HttpClient.post('http://localhost:10000/auth/register', userData)
   }
 
   login(userData: object): Observable<any> {
-    return this._HttpClient.post('http://localhost:1000/auth/login', userData)
+    return this._HttpClient.post('http://localhost:10000/auth/login', userData)
   }
 
   setUserData(): void {
